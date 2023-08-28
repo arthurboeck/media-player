@@ -1,0 +1,85 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Media Player API",
+    "description": "API de Media Player criada na disciplina de Arquitetura BackEnd da Especializacao em Arquitetura de Software Distribuido da PUCMG",
+    "version": "1.0.0"
+  },
+  "host": "",
+  "basePath": "",
+  "schemes": [],
+  "paths": {
+    "/api/v1/data": {
+      "post": {
+        "description": "",
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/v1/playlists": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "nome": {
+                  "example": "any"
+                },
+                "descricao": {
+                  "example": "any"
+                },
+                "id": {
+                  "example": "any"
+                },
+                "artista": {
+                  "example": "any"
+                },
+                "album": {
+                  "example": "any"
+                },
+                "duracao": {
+                  "example": "any"
+                },
+                "tamanho": {
+                  "example": "any"
+                },
+                "rota": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    }
+  }
+}
