@@ -1,7 +1,7 @@
 const swaggerAutogen = require('swagger-autogen')();
 
 const outputFile = './swagger-output.json';
-const endpointsFiles = ['./controller/playlist-controller.js'];
+const endpointsFiles = ['./controller/playlist-controller.js','./controller/song-controller.js'];
 
 const doc = {
     info: {
