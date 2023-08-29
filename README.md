@@ -20,10 +20,8 @@ Media player desenvolvido na disciplina de Arquitetura de Software BackEnd - PUC
         rota: 'rota da musica'
     } 
 
-/playlist - listar todas as playlists
-/playlist - criar playlists
-/playlist/{id}/detail - detalhe das playlists
-/playlist/{id}/song - add musica a playlist
-/playlist/{id}/song/{id} - remove musica da playlist
-
-https://github.com/louischatriot/nedb/wiki/Creating-loading-the-database
+/playlist - listar todas as playlists DONE
+/playlist - criar playlists DONE
+/playlist/{id}/detail - detalhe das playlists DONE
+/playlist/{id}/song - add musica a playlist DONE
+/playlist/{id}/song/{id} - remove musica da playlist DONE
