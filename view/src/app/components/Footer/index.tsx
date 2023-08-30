@@ -11,19 +11,29 @@ interface FooterProps {
 }
 
 export default function Footer({ song }: FooterProps) {
-  const [musicPlaying, setMusicPlaying] = useState(false)
+  const [musicPlaying, setMusicPlaying] = useState(false);
 
   return (
     <footer className="footer">
-      <h3>{song.nome}</h3>
-      <audio
-        id="song"
-        autoPlay
-        src={`/${song.nome}.mp3`}
-        onPlay={() => setMusicPlaying(true)}
-        onPause={() => setMusicPlaying(false)}
-        controls
-      />
+      {
+        song?.nome === undefined ? (
+          <>
+            <h3>Nenhum arquivo de áudio selecionado</h3>
+          </>
+        ) : (
+          <>
+            <h3>{song.nome}</h3>
+            <audio
+              id="song"
+              autoPlay
+              src={`/${song.nome}.mp3`}
+              onPlay={() => setMusicPlaying(true)}
+              onPause={() => setMusicPlaying(false)}
+              controls
+            />
+          </>
+        )
+      }
     </footer>
   )
 }
