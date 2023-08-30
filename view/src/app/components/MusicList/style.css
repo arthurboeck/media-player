@@ -59,9 +59,9 @@
     padding: 8px;
     border-radius: 4px;
     flex: 1;
-
     font-family: 'Roboto';
     margin-top: 12px;
+    cursor: pointer;
 }
 
 .list li:hover {
