@@ -17,7 +17,7 @@ module.exports = function (router) {
             // Crie um objeto Song com informações padrão para cada música
             const song = new Song(
                 index + 1,
-                `Música ${index + 1}`,
+                file.replace('.mp3', ''),
                 'Artista Padrão',
                 'Álbum Padrão',
                 'Tamanho Desconhecido',
