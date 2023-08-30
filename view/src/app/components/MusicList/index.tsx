@@ -83,9 +83,6 @@ export default function MusicList({ setSong }: MusicListProps) {
  
     const filteredList = (selectedPlaylist?.musicas || songs).filter(song => song.nome.toLowerCase().includes(search.toLowerCase()));
 
-    console.log(selectedPlaylist);
-    console.log(filteredList);
-
     return (
         <section className='music-section'>
             <div className='music-actions'>
