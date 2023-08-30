@@ -6,15 +6,18 @@ import { useState } from 'react'
 
 import Footer from './components/Footer';
 import MusicList from './components/MusicList';
+import { SongContext } from './contexts/SongContext';
 import { Song } from './interfaces/Song';
 
 export default function Home() {
-  const [song, setSong] = useState<Song>({} as Song)
+  const [songName, setSongName] = useState<Song>({} as Song)
 
   return (
-    <main style={{ background: '#000', height: '100vh', display: 'flex', flexDirection: 'column' }}>
-      <MusicList setSong={setSong}/>
-      <Footer song={song}/>
-    </main>
+    <SongContext.Provider value={{ songName, setSongName }}>
+      <main style={{ background: '#000', height: '100vh', display: 'flex', flexDirection: 'column' }}>
+        <MusicList setSong={setSongName}/>
+        <Footer song={songName}/>
+      </main>
+    </SongContext.Provider>
   )
 }

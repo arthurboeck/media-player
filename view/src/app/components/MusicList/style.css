@@ -62,8 +62,14 @@
     font-family: 'Roboto';
     margin-top: 12px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
 .list li:hover {
     filter: brightness(0.8);
+}
+
+.list li svg {
+    padding: 2px;
 }
