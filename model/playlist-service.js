@@ -30,8 +30,9 @@ function findPlaylistIndexById(id) {
 
 function createPlaylist(playlist) {
     const id = playListData.data.length + 1;
-    const newPlaylist = new Playlist(id, playlist.nome, playlist.descricao, []);
+    const newPlaylist = new Playlist(id, playlist.nome, playlist.descricao, playlist.musicas);
     playListData.data.push(newPlaylist);
+    return newPlaylist;
 };
 
 function updatePlaylistByIndex(index, newData) {
