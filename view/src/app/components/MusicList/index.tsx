@@ -135,13 +135,14 @@ export default function MusicList({ setSong }: MusicListProps) {
             <div className='playlists'>
                 <h2>Playlists</h2>
                 <ul className='playlist'>
-                    <li onClick={() => setSelectedPlaylist({} as Playlist)}>
+                    <li onClick={() => setSelectedPlaylist({} as Playlist)} className={!selectedPlaylist?.id? 'selected-item' : ''} >
                         Todas as músicas
                     </li>
                     {playlists
                         .map(playlist => (
                             <li key={playlist.nome}
                                 onClick={() => setSelectedPlaylist(playlist)}
+                                className={selectedPlaylist?.id === playlist.id ? 'selected-item' : ''}
                             >
                                 {playlist.nome}
                             </li>
@@ -153,9 +154,11 @@ export default function MusicList({ setSong }: MusicListProps) {
                 {filteredList
                     .map(song => (
                         <li key={song.nome} 
-                            onClick={() => songName?.nome !== song.nome?  setSong(song) : setSong()}>
+                            onClick={() => songName?.nome !== song.nome?  setSong(song) : setSong()}
+                            className={songName?.nome === song.nome ? 'selected-item' : ''}
+                        >
                             {songName?.nome === song.nome ? (
-                                <StopCircle htmlColor='#fff' />
+                                <StopCircle htmlColor='#413e3e' />
                             ) : (
                                 <PlayCircle htmlColor='#fff' />
                             )}

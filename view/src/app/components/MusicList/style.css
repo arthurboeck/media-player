@@ -121,3 +121,8 @@ ul.playlist > li {
     min-height: 40px;
     margin: 4px;
 }
+
+.selected-item {
+    background: #fff !important;
+    color: #000 !important;
+}
