@@ -32,12 +32,12 @@ module.exports = function (router) {
         const requestBody = req.body;
 
         const playlist = {
-            nome: requestBody.nome,
-            descricao: requestBody.descricao,
+            nome: requestBody.nome || '',
+            descricao: requestBody.descricao || '',
+            musicas: requestBody.musicas || []
         };
 
-        playlistService.createPlaylist(playlist)
-        res.status(201).send();
+        res.status(200).send(playlistService.createPlaylist(playlist));
     });
 
     router.put('/api/v1/playlists/:id', (req, res) => {

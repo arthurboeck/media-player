@@ -27,7 +27,6 @@ export default function Footer({ song }: FooterProps) {
               id="song"
               autoPlay
               src={`/${song.nome}.mp3`}
-              onPlay={() => setMusicPlaying(true)}
               onPause={() => setMusicPlaying(false)}
               controls
             />

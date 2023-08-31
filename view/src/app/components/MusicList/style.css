@@ -73,3 +73,56 @@
 .list li svg {
     padding: 2px;
 }
+
+div.playlist-checklist {
+    height: 80%;
+    display: flex;
+    overflow-x: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    margin: 20px;
+}
+
+div.music-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+div.playlists {
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+ul.playlist {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+ul.playlist > li {
+    list-style: none;
+    background: #413e3e;
+    padding: 8px;
+    border-radius: 4px;
+    flex: 1;
+    font-family: 'Roboto';
+    margin-top: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+    margin: 4px;
+}
+
+.selected-item {
+    background: #fff !important;
+    color: #000 !important;
+}
